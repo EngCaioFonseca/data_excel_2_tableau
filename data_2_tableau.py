@@ -55,9 +55,9 @@ def visualize_data(dataset_melted):
         except Exception as e:
             st.error(f"An error occurred during visualization: {e}")
 
-st.title("Pivot Data Processor")
+st.title("Data Preprocessing (Excel) for Tableau")
 
-uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx", "xls"])
+uploaded_file = st.file_uploader("Choose the raw data from the probes (an Excel file)", type=["xlsx", "xls"])
 
 if uploaded_file is not None:
     dataset_melted = process_file(uploaded_file)
